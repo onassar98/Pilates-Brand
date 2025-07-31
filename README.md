@@ -39,16 +39,17 @@ A modern, responsive website for ZenFlow Pilates, a luxury pilates brand based i
 
 ### 📞 **Contact Section**
 - Contact form with validation
+- Beautiful popup confirmation with 24-hour response promise
 - Studio location and hours
 - Multiple contact methods
 
 ## 🎨 Design Features
 
-- **Luxury Aesthetic**: Premium color scheme with gradients
+- **Luxury Aesthetic**: Elegant linen color scheme with warm gradients
 - **Responsive Design**: Works perfectly on all devices
 - **Smooth Animations**: CSS transitions and JavaScript animations
 - **Modern Typography**: Playfair Display for headings, Inter for body text
-- **Interactive Elements**: Hover effects, form validation, notifications
+- **Interactive Elements**: Hover effects, form validation, notifications, contact form popup
 
 ## 🛠️ Technical Stack
 
@@ -120,11 +121,11 @@ zenflow-pilates/
 
 ## 🎨 Color Palette
 
-- **Primary**: #667eea (Purple Blue)
-- **Secondary**: #764ba2 (Deep Purple)
-- **Accent**: #f5f7fa (Light Gray)
-- **Text**: #333 (Dark Gray)
-- **Background**: #f8f9fa (Light Background)
+- **Primary**: #b8a898 (Linen Brown)
+- **Secondary**: #d4c4a8 (Light Linen)
+- **Accent**: #f5f3f0 (Warm Light Gray)
+- **Text**: #5a5a5a (Soft Dark Gray)
+- **Background**: #faf9f6 (Linen White)
 
 ## 🔧 Customization
 

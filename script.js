@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = this.querySelector('input[type="tel"]').value;
             const message = this.querySelector('textarea').value;
 
-            // Simulate form submission
-            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+            // Show popup with 24-hour response message
+            showContactPopup(name);
             this.reset();
         });
     }
@@ -121,6 +121,190 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Contact form popup
+    function showContactPopup(name) {
+        const popup = document.createElement('div');
+        popup.className = 'contact-popup';
+        popup.innerHTML = `
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3>Thank You, ${name}!</h3>
+                    <button class="popup-close">&times;</button>
+                </div>
+                <div class="popup-body">
+                    <div class="popup-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <p>Your message has been successfully sent to our team.</p>
+                    <p class="popup-highlight">We will respond within 24 hours.</p>
+                    <p>In the meantime, feel free to explore our services and packages.</p>
+                </div>
+                <div class="popup-footer">
+                    <button class="btn btn-primary popup-ok">Got it!</button>
+                </div>
+            </div>
+        `;
+
+        // Add popup styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .contact-popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: fadeIn 0.3s ease;
+            }
+            
+            .popup-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+            }
+            
+            .popup-content {
+                position: relative;
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+                animation: slideIn 0.3s ease;
+            }
+            
+            .popup-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #f0ede5;
+            }
+            
+            .popup-header h3 {
+                color: #b8a898;
+                margin: 0;
+            }
+            
+            .popup-close {
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #999;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            
+            .popup-close:hover {
+                background: #f5f3f0;
+                color: #b8a898;
+            }
+            
+            .popup-body {
+                margin-bottom: 2rem;
+            }
+            
+            .popup-icon {
+                font-size: 4rem;
+                color: #b8a898;
+                margin-bottom: 1rem;
+            }
+            
+            .popup-body p {
+                margin-bottom: 1rem;
+                color: #5a5a5a;
+                line-height: 1.6;
+            }
+            
+            .popup-highlight {
+                font-weight: 600;
+                color: #b8a898;
+                font-size: 1.1rem;
+            }
+            
+            .popup-footer {
+                text-align: center;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            @keyframes slideIn {
+                from { 
+                    opacity: 0;
+                    transform: translateY(-50px) scale(0.9);
+                }
+                to { 
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .popup-content {
+                    padding: 1.5rem;
+                    margin: 1rem;
+                }
+                
+                .popup-icon {
+                    font-size: 3rem;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.body.appendChild(popup);
+
+        // Close popup functionality
+        const closePopup = () => {
+            popup.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                if (document.body.contains(popup)) {
+                    document.body.removeChild(popup);
+                }
+            }, 300);
+        };
+
+        const closeBtn = popup.querySelector('.popup-close');
+        const okBtn = popup.querySelector('.popup-ok');
+        const overlay = popup.querySelector('.popup-overlay');
+
+        closeBtn.addEventListener('click', closePopup);
+        okBtn.addEventListener('click', closePopup);
+        overlay.addEventListener('click', closePopup);
+
+        // Add fadeOut animation
+        const fadeOutStyle = document.createElement('style');
+        fadeOutStyle.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(fadeOutStyle);
+    }
+
     // Notification system
     function showNotification(message, type = 'info') {
         const notification = document.createElement('div');
@@ -137,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+            background: ${type === 'success' ? '#b8a898' : type === 'error' ? '#f44336' : '#2196F3'};
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 10px;

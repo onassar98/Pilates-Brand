@@ -8,8 +8,9 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #5a5a5a;
     overflow-x: hidden;
+    background-color: #faf9f6;
 }
 
 .container {
@@ -64,23 +65,23 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #d4c4a8 0%, #b8a898 100%);
+    color: #5a5a5a;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(212, 196, 168, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #667eea;
-    border: 2px solid #667eea;
+    color: #b8a898;
+    border: 2px solid #b8a898;
 }
 
 .btn-secondary:hover {
-    background: #667eea;
+    background: #b8a898;
     color: white;
     transform: translateY(-2px);
 }
@@ -107,7 +108,7 @@ p {
 }
 
 .nav-logo h2 {
-    color: #667eea;
+    color: #b8a898;
     font-size: 1.8rem;
     margin: 0;
 }
@@ -126,7 +127,7 @@ p {
 }
 
 .nav-menu a:hover {
-    color: #667eea;
+    color: #b8a898;
 }
 
 .nav-toggle {
@@ -148,7 +149,7 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #faf9f6 0%, #f0ede5 100%);
     padding-top: 80px;
 }
 
@@ -158,7 +159,7 @@ p {
 }
 
 .hero-content h1 {
-    color: #333;
+    color: #5a5a5a;
     margin-bottom: 1.5rem;
 }
 
@@ -184,17 +185,17 @@ p {
 
 /* Image Placeholders */
 .image-placeholder {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d4c4a8 0%, #b8a898 100%);
     border-radius: 20px;
     padding: 3rem;
     text-align: center;
-    color: white;
+    color: #5a5a5a;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 20px 40px rgba(212, 196, 168, 0.2);
 }
 
 .image-placeholder i {
@@ -218,7 +219,7 @@ p {
 }
 
 .section-header h2 {
-    color: #333;
+    color: #5a5a5a;
     margin-bottom: 1rem;
 }
 
@@ -254,7 +255,7 @@ p {
 }
 
 .feature i {
-    color: #667eea;
+    color: #b8a898;
     font-size: 1.5rem;
     margin-top: 0.2rem;
 }
@@ -262,7 +263,7 @@ p {
 /* Instructor Section */
 .instructor {
     padding: 6rem 0;
-    background: #f8f9fa;
+    background: #f5f3f0;
 }
 
 .instructor-content {
@@ -273,7 +274,7 @@ p {
 }
 
 .instructor-title {
-    color: #667eea;
+    color: #b8a898;
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -290,7 +291,7 @@ p {
 }
 
 .stat h4 {
-    color: #667eea;
+    color: #b8a898;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -336,7 +337,7 @@ p {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #667eea;
+    background: #b8a898;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -351,7 +352,7 @@ p {
 .product-price {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #667eea;
+    color: #b8a898;
     margin: 1rem 0;
 }
 
@@ -362,13 +363,13 @@ p {
 /* Packages Section */
 .packages {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #d4c4a8 0%, #b8a898 100%);
+    color: #5a5a5a;
 }
 
 .packages .section-header h2,
 .packages .section-header p {
-    color: white;
+    color: #5a5a5a;
 }
 
 .packages-grid {
@@ -394,7 +395,7 @@ p {
 
 .package-card.featured {
     transform: scale(1.05);
-    border: 3px solid #667eea;
+    border: 3px solid #b8a898;
 }
 
 .package-badge {
@@ -402,7 +403,7 @@ p {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: #667eea;
+    background: #b8a898;
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
@@ -421,7 +422,7 @@ p {
 .package-price .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #667eea;
+    color: #b8a898;
 }
 
 .package-price .period {
@@ -441,7 +442,7 @@ p {
 }
 
 .package-features i {
-    color: #667eea;
+    color: #b8a898;
 }
 
 .yearly-discount {
@@ -478,7 +479,7 @@ p {
 }
 
 .app-feature i {
-    color: #667eea;
+    color: #b8a898;
     font-size: 1.5rem;
     margin-top: 0.2rem;
 }
@@ -502,7 +503,7 @@ p {
 }
 
 .download-btn:hover {
-    background: #667eea;
+    background: #b8a898;
     transform: translateY(-2px);
 }
 
@@ -558,7 +559,7 @@ p {
 }
 
 .menu-item.active {
-    background: #667eea;
+    background: #b8a898;
     color: white;
 }
 
@@ -569,7 +570,7 @@ p {
 /* Contact Section */
 .contact {
     padding: 6rem 0;
-    background: #f8f9fa;
+    background: #f5f3f0;
 }
 
 .contact-content {
@@ -586,7 +587,7 @@ p {
 }
 
 .contact-item i {
-    color: #667eea;
+    color: #b8a898;
     font-size: 1.5rem;
     margin-top: 0.2rem;
 }
@@ -609,7 +610,7 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #b8a898;
 }
 
 /* Footer */
@@ -647,7 +648,7 @@ p {
 }
 
 .footer-section a:hover {
-    color: #667eea;
+    color: #b8a898;
 }
 
 .social-links {
@@ -662,14 +663,14 @@ p {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #667eea;
+    background: #b8a898;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     transform: translateY(-2px);
-    background: #764ba2;
+    background: #d4c4a8;
 }
 
 .newsletter-form {
