@@ -321,8 +321,8 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: ${type === 'success' ? '#b8a898' : type === 'error' ? '#f44336' : '#2196F3'};
-            color: white;
+            background: ${type === 'success' ? '#d7d3cd' : type === 'error' ? '#f44336' : '#2196F3'};
+            color: ${type === 'success' ? '#141414' : 'white'};
             padding: 1rem 1.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
